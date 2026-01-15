@@ -10,7 +10,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       taxonomy-card
  *
- * @package Wpdevagent
+ * @package TaxonomyCard
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -57,3 +57,12 @@ function wpdevagent_taxonomy_card_block_init() {
 	}
 }
 add_action( 'init', 'wpdevagent_taxonomy_card_block_init' );
+
+
+// Autoload all PHP files in the includes/ folder.
+foreach ( glob( __DIR__ . '/includes/*.php' ) as $filename ) {
+	include_once $filename;
+}
+
+new Taxonomy_Card_Settings();
+new Taxonomy_Card_Script();

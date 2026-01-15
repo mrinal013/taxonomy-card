@@ -6,10 +6,10 @@ return array(
 		'apiVersion' => 3,
 		'name' => 'wpdevagent/taxonomy-card',
 		'version' => '0.1.0',
-		'title' => 'Example Dynamic',
+		'title' => 'Taxonomy card',
 		'category' => 'widgets',
 		'icon' => 'category',
-		'description' => 'Example block scaffolded with Create Block tool.',
+		'description' => 'Gutenberg Block – Taxonomy Showcase Cards.',
 		'example' => array(
 			
 		),

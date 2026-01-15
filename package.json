@@ -15,9 +15,12 @@
 		"start": "wp-scripts start --webpack-copy-php --blocks-manifest"
 	},
 	"dependencies": {
+		"@woocommerce/woocommerce-rest-api": "^1.0.2",
 		"@wordpress/block-editor": "latest",
 		"@wordpress/blocks": "latest",
-		"@wordpress/i18n": "latest"
+		"@wordpress/components": "^31.0.0",
+		"@wordpress/i18n": "latest",
+		"node-polyfill-webpack-plugin": "^4.1.0"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^31.2.0"

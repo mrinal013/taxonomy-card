@@ -6,7 +6,125 @@
  */
 
 .wp-block-wpdevagent-taxonomy-card {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	&:hover {
+		.main {
+			border-top: 1px solid var(--wp--preset--color--accent-1) !important;
+			border-bottom: 1px solid var(--wp--preset--color--accent-1) !important;
+		}
+	}
+	.full-area-wrap {
+		position: relative;
+		.image-wrap {
+			position: relative;
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+		.main-wrap {
+			display: flex;
+			position: absolute;
+			top: 50%;
+    		left: 50%;
+    		transform: translate(-50%, -50%);
+			height: 50%;
+		}
+	}
+	.box {
+		position: relative;
+		display: flex;
+		flex-grow: 1;
+		background: linear-gradient(0deg,#000000 0%, transparent 100%);
+		
+		.left,
+		.right {
+			width: 40px;
+			height: 100%;
+			border: 1px solid var(--wp--preset--color--accent-1);
+		}
+		.left {
+			border-right: none;
+		}
+		.right {
+			border-left: none;
+		}
+		.main {
+			height: 100%;
+			text-align: center;
+			padding: 0 15px;
+			bottom: 15px;
+			font-size: 20px;
+			font-weight: 700;
+			color: var(--wp--preset--color--base);
+			border-top: 1px solid transparent;
+			border-bottom: 1px solid transparent;
+			display: flex;
+    		flex-direction: column;
+    		justify-content: center;
+    		align-items: center;
+			.discover {
+				width: fit-content;
+				font-size: 14px;
+				padding: 7px 15px;
+				background-color: var(--wp--preset--color--accent-1);
+			}
+		}
+	}
+	&.is-style-secondary {
+		&:hover {
+			.box {
+				background: linear-gradient(0deg,var(--wp--preset--color--accent-1) 0%, transparent 100%);
+			}
+			.main {
+				border-top: none !important;
+				border-bottom: none !important;
+			}
+			.description-area {
+				display: block !important;
+				height: 100% !important;
+			}
+		}
+		.main-wrap {
+			display: flex;
+			position: absolute;
+			top: auto;
+			bottom: 0;
+    		left: 0%;
+			transform: none;
+			width: 100%;
+			height: 50%;
+			.box {
+				background-color: transparent;
+				justify-content: space-between;
+				align-items: flex-end;
+				padding: 15px;
+				.name-area {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 100%;
+				}
+				.main {
+					padding: 0;
+					height: auto;
+					width: 100%;
+					
+				}
+				.description-area {
+					display: none;
+					height: 0;
+					transition: height 1s;
+					.description {
+						border-top: 1px solid #fff;
+						margin-top: 15px;
+						text-align: left;
+						font-size: 16px;
+    					font-weight: 400;
+					}
+				}
+			}
+			
+		}
+		
+	}
 }
